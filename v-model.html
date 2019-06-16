@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="add" >
+        <input v-model="message">
+        <p>{{message}}</p>
+        <!--複数行テキスト-->
+        <textarea v-model="message"></textarea>
+        <pre>{{message}}</pre>
+        <!--チェックボックス(単品)-->
+        <input type="checkbox" v-model = "val">
+        <p>{{val}}</p>
+        <!--複数要素の取得-->
+        <label><input type="checkbox" v-model="val2" :value="val"></label>
+        <label><input type="checkbox" v-model="val2" value="B"></label>
+        <label><input type="checkbox" v-model="val2" value="C"></label>
+        <p>{{val2}}</p>
+        <!--ラジオボタン-->
+        <label><input type="radio" v-model="val3" :value="val"></label>
+        <label><input type="radio" v-model="val3" value="B"></label>
+        <label><input type="radio" v-model="val3" value="C"></label>
+        <p>{{val3}}</p>
+        <!--セレクトボックス（単品）
+        <label><input type="radio" v-model="val4" :value="val"></label>
+        <label><input type="radio" v-model="val4" value="B"></label>
+        <label><input type="radio" v-model="val4" value="C"></label>
+        <p>{{val4}}</p>-->
+        <!--画像ファイル
+        <input type="file" @change="handleChange">
+        <div v-if="!preview"><img v-bind:src="preview"></div>
+        <input type="range" v-mode.number="val4">
+        {{val4}}<br>-->
+        <input  v-model.number="val4">
+        {{val4}}<br>
+        <input v-model.lazy="val4">
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="v-model.js"></script>
+</body>
+</html>

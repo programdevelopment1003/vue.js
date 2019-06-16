@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+</head>
+<body>
+    <div id='app'> 
+        <input v-model="width">
+    <p>{{width}}の半分は{{halfWidth}}</p>
+    <p>{{halfPoint.x}}</p>
+    <p>{{halfPoint.y}}</p>
+    <p>set:<input v-model.number="val">{{val}}</p>
+    <p>get:<input v-model.number="halfval">{{halfval}}</p>
+
+    
+    <input v-model.number="budget">円に絞り込む
+    <input v-model.number="limit">件を表示
+    <p>{{matched.length}}件中{{limites.length}}件示中
+    <p v-for="item in limites" :key = "item.id">
+        {{item.name}}{{item.price}}</p>
+    </div>
+    <script src="vue.min.js"></script>
+<script src="computed.js"></script>
+    
+</body>
+</html>

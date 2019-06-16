@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+            <comp-child></comp-child>
+            <comp-child>っっs</comp-child>
+        <comp-child>
+            {{message}}
+        </comp-child>
+        <aa>
+            <header slot=header>vue.js!</header>
+            <div slot=footer>vue.jsはjsのフレイムワーク</div>
+        </aa>
+        <comp>
+            <p slot-scope="uketori">
+                スロットから受け取ったtext->{{uketori.text}}
+            </p>
+        </comp>
+    </div> 
+        <script src="vue.min.js"></script>
+        <script src="slot.js"></script>
+</body>
+</html>
